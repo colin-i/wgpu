@@ -1,16 +1,17 @@
 name: CI
 
 on:
-  push:
-    branches-ignore: [
-      # We don't need to run on dependabot PRs.
-      "dependabot/**",
-      # This is the branch the merge queue creates.
-      "gh-readonly-queue/**"
-    ]
-    tags: [v0.*]
-  pull_request:
-  merge_group:
+  workflow_dispatch:
+#  push:
+#    branches-ignore: [
+#      # We don't need to run on dependabot PRs.
+#      "dependabot/**",
+#      # This is the branch the merge queue creates.
+#      "gh-readonly-queue/**"
+#    ]
+#    tags: [v0.*]
+#  pull_request:
+#  merge_group:
 
 env:
   #
